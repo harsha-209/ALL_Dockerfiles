@@ -1,0 +1,16 @@
+FROM ubuntu:18.04
+RUN apt update
+ARG BUILD_URL
+RUN apt install -y \
+   software-properties-common \
+   vim \
+   net-tools \
+   curl \
+   nodejs \
+   npm
+RUN npm i -g n && n stable && PATH="$PATH"
+COPY . /var/www/react-classicrummy
+WORKDIR /var/www/react-classicrummy
+RUN npm i
+RUN npm run build --prod --deploy-url='${BUILD_URL}'
+CMD [ "serve","-s","build"]
