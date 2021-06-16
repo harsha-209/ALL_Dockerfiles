@@ -12,3 +12,37 @@ here need to understant to deploy tomcat on webapps folder
 
 
 3. for nodejs or npm based docker file , we have to observe that package.json file. in the package.json file we have to all dependencies in this file , so we have to install through npm i to install all package in this package.json file
+
+outputs of some languages and its deployments
+
+S.No
+Stack
+Dependencies file
+Build Tool
+WebServer
+Binary Directory
+Binary Extension
+
+1
+Java
+pom.xml
+Maven/Gradle
+Tomcat
+target
+.war/.jar
+
+2
+Angular
+package.json
+Angular CLI/ng
+Nginx/Apache
+dist
+.html/.js/.css etc
+
+3
+React
+package.json
+react-scripts/webpack
+Nginx/Apache
+build
+.html/.js/.css etc
