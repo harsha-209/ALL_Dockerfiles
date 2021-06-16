@@ -15,8 +15,8 @@ here need to understant to deploy tomcat on webapps folder
 
 outputs of some languages and its deployments
 
+user-images.githubusercontent.com/51083187/122209775-88db9000-cec2-11eb-83d6-9edcea8c547a.png
 
-https://user-images.githubusercontent.com/51083187/122209775-88db9000-cec2-11eb-83d6-9edcea8c547a.png
 
 S.No
 Stack
