@@ -1,0 +1,33 @@
+FROM ubuntu
+
+ARG url
+ARG username
+ARG password
+
+#RUN export ENV_URL=url
+WORKDIR /app
+
+COPY f1 ./
+
+RUN sed -i "s/mongdburl/${url}/g" f1
+
+RUN sed -i "s/dbusername/${username}/g" f1
+
+
+RUN sed -i "s/dbpassword/${password}/g" f1
+
+
+
+
+
+cat f1 file 
+
+
+FROM nginx:alpine
+ARG DOCKER_HOST
+echo username=dbusername
+echo password=dbpassword
+echo dburl=mongdburl
+COPY ./nginx.conf /etc/nginx/nginx.conf
+RUN sed -i 's/localhost/${DOCKER_HOST}/g' /etc/nginx/nginx.conf
+EXPOSE 80
